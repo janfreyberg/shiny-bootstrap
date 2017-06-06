@@ -82,7 +82,7 @@ shinyServer(function(input, output) {
     inputData() %>%
       ggplot(aes(x=x, y=y, color=x)) +
       geom_point(size=2) +
-      viridis::scale_color_viridis() +
+      scale_color_gradient(low='blue', high='green') +
       geom_smooth(method=lm, color='gray')
   })
 
